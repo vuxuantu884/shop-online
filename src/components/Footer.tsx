@@ -65,23 +65,20 @@ export const FooterComponent = () => {
 
 const StyledComponent = styled.div`
   background: #2a2a86 top center;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+
   padding: 25px 0 0;
   color: #fff;
   .container-footer {
     margin: 0 auto;
     @media screen and (min-width: ${p => p.theme.breakpoints.xl + 'px'}) {
-      max-width: ${p => p.theme.breakpoints.xl + 'px'};
+      max-width: 1210px;
     }
     @media screen and (min-width: ${p => p.theme.breakpoints['2xl'] + 'px'}) {
       max-width: ${p => p.theme.breakpoints['2xl'] + 'px'};
     }
   }
   p {
-    font-size: 18px !important;
+    font-size: 14px !important;
     margin-bottom: 6px;
   }
   .sum {
@@ -92,6 +89,6 @@ const StyledComponent = styled.div`
   }
   .copyright {
     text-align: center;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
   }
 `;

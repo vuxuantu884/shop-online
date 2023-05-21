@@ -14,7 +14,7 @@ export const HeaderComponent = () => {
     <StyledComponent className='background-header py-1'>
       <Row className={`container-header`} align='middle' justify='space-between'>
         <Col span={10}>
-          <Row gutter={[32, 0]}>
+          <Row gutter={[24, 0]}>
             <Col>
               <img src={Logo} className='logo' />
             </Col>
@@ -55,21 +55,20 @@ export const HeaderComponent = () => {
           </Row>
         </Col>
       </Row>
-      <Row className={`container-header menu-header`} justify='space-between'>
-        <Col span={18}>
-          <Row gutter={[32, 0]}>
+      <Row className={`container-header menu-header`} justify='space-between' align="middle">
+        <Col span={16}>
+          <Row gutter={[24, 0]} align="middle">
             <Col style={{ color: '#CD151C ' }}>Sale up to 50%</Col>
             {dataMenu.map(data => {
               return <Col key={data}>{data}</Col>;
             })}
           </Row>
         </Col>
-        <Col>
-          <Row gutter={[24, 0]}>
-            <Col>
+        <Col span={8}>
+          <Row gutter={[24, 0]} justify='end'>
+            <Col style={{ flex: 1, textAlign: 'end' }}>
               <ShoppingCartOutlined style={{ fontSize: '24px' }} /> Giỏ hàng
             </Col>
-
             <Col>
               <UserOutlined style={{ fontSize: '24px' }} /> <span>Đăng ky</span> /{' '}
               <span>Đăng nhập</span>
@@ -89,9 +88,9 @@ const StyledComponent = styled.div`
   padding: 4px 0;
   .container-header {
     margin: 0 auto;
-    padding: 8px 0;
+    padding: 4px 0;
     @media screen and (min-width: ${p => p.theme.breakpoints.xl + 'px'}) {
-      max-width: ${p => p.theme.breakpoints.xl + 'px'};
+      max-width: 1210px;
     }
     @media screen and (min-width: ${p => p.theme.breakpoints['2xl'] + 'px'}) {
       max-width: ${p => p.theme.breakpoints['2xl'] + 'px'};
@@ -99,7 +98,7 @@ const StyledComponent = styled.div`
   }
   .menu-header div {
     font-weight: 600;
-    font-size: 18px !important;
+    font-size: 14px !important;
     text-transform: uppercase;
     color: #11006f;
   }
@@ -114,7 +113,7 @@ const StyledComponent = styled.div`
     background-color: ${p => p.theme.colors.main};
   }
   b {
-    font-size: 18px;
+    font-size: 14px;
   }
   .btn-free {
     border-radius: 20px;
@@ -122,7 +121,7 @@ const StyledComponent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
     cursor: initial;
     font-weight: 600;
   }
