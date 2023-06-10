@@ -1,10 +1,14 @@
-import { BannerComponent, CarouselBanner, HeaderComponent, FooterComponent } from './components';
+import { CarouselBanner, FooterComponent, HeaderComponent, HomePageComponent } from './components';
 
 function App() {
   return (
     <>
-      <BannerComponent /> <HeaderComponent />
-      <CarouselBanner />
+      {/* <BannerComponent /> */}
+      <HeaderComponent />
+      <div style={{ background: '#fff' }}>
+        <CarouselBanner />
+        <HomePageComponent />
+      </div>
       <FooterComponent />
     </>
   );

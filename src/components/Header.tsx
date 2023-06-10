@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { PhoneOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 
 import BackgroundHeader from '../assets/images/background-header.png';
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/images/logo.png';
 
 const { Search } = Input;
 
-const dataMenu = ['Nữ', 'Nam', 'Trẻ em', 'Bộ sưu tập', 'Đồng phục', 'Về Yody', 'Blog'];
+const dataMenu = ['Nữ', 'Nam', 'Trẻ em', 'Bộ sưu tập', 'Đồng phục', 'Blog'];
 
 export const HeaderComponent = () => {
   return (
@@ -35,7 +35,7 @@ export const HeaderComponent = () => {
                 <PhoneOutlined
                   style={{ fontSize: '24px', marginRight: '8px', transform: 'rotate(90deg)' }}
                 />
-                <b>1800 2086</b>
+                <b>0981.29.1992</b>
               </Row>
             </Col>
             <Col>
@@ -49,15 +49,15 @@ export const HeaderComponent = () => {
                 <PhoneOutlined
                   style={{ fontSize: '24px', marginRight: '8px', transform: 'rotate(90deg)' }}
                 />
-                <b>02499986999</b>
+                <b>0857.686.222</b>
               </Row>
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row className={`container-header menu-header`} justify='space-between' align="middle">
+      <Row className={`container-header menu-header`} justify='space-between' align='middle'>
         <Col span={16}>
-          <Row gutter={[24, 0]} align="middle">
+          <Row gutter={[24, 0]} align='middle'>
             <Col style={{ color: '#CD151C ' }}>Sale up to 50%</Col>
             {dataMenu.map(data => {
               return <Col key={data}>{data}</Col>;
@@ -91,9 +91,13 @@ const StyledComponent = styled.div`
     padding: 4px 0;
     @media screen and (min-width: ${p => p.theme.breakpoints.xl + 'px'}) {
       max-width: 1210px;
+      padding: unset !important;
+      width: 100% !important;
     }
     @media screen and (min-width: ${p => p.theme.breakpoints['2xl'] + 'px'}) {
       max-width: ${p => p.theme.breakpoints['2xl'] + 'px'};
+      padding: unset !important;
+      width: 100% !important;
     }
   }
   .menu-header div {
@@ -103,8 +107,8 @@ const StyledComponent = styled.div`
     color: #11006f;
   }
   .logo {
-    width: 80px;
-    height: 38px;
+    /* width: 80px;
+    height: 38px; */
   }
   .mr-8 {
     margin-right: 32px;

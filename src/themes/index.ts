@@ -9,6 +9,6 @@ export const themes: IThemes = {
     sm: 640,
   },
   colors: {
-    main: '#fcaf17',
+    main: '#a4d7fe',
   },
 };

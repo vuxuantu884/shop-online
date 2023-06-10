@@ -10,3 +10,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+.ant-col-4\.8 {
+  width: 20% !important;
+}
