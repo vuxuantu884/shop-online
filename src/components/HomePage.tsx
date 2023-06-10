@@ -214,7 +214,6 @@ const StyledComponent = styled.div<{ srcHot: string }>`
     display: block;
     font-size: 16px;
     font-family: 'SVN-Gilroy Bold';
-    margin-bottom: 7px;
     padding-right: 0px;
     overflow: hidden;
     position: relative;
@@ -226,6 +225,9 @@ const StyledComponent = styled.div<{ srcHot: string }>`
   .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+
     .payment a {
       color: inherit;
     }
