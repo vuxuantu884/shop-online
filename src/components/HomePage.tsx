@@ -1,22 +1,22 @@
-import { Button, Col, Row } from 'antd';
+import { Col, Row } from 'antd';
 import { styled } from 'styled-components';
 // import ImageQuat from '../assets/images/quat.jpg';
-import ImageProductQuat from '../assets/images/products/quat.jpg';
-import ImageProductDoiQuat from '../assets/images/products/doi_quat.jpg';
+import { IProduct } from '@/interfaces';
+import { Link } from 'react-router-dom';
+import HotIcon from '../assets/images/hotico.svg';
+import IConStart from '../assets/images/icon_start.svg';
+import ImageProductAoRoiDen from '../assets/images/products/ao_roi_den.jpg';
+import ImageProductAoRoGhi from '../assets/images/products/ao_roi_ghi.jpg';
+import ImageProductAoRoiRanRi from '../assets/images/products/ao_roi_ran_ri.jpg';
+import ImageProductAoRoiXam from '../assets/images/products/ao_roi_xam.jpg';
 import ImageProductBoPin from '../assets/images/products/bo_pin.jpg';
-import ImageProductSetDieuHoaRanRi from '../assets/images/products/set_dieu_hoa_ran_ri.jpg';
+import ImageProductDoiQuat from '../assets/images/products/doi_quat.jpg';
+import ImageProductQuat from '../assets/images/products/quat.jpg';
 import ImageProductSetDieuHoaDen from '../assets/images/products/set_dieu_hoa_den.jpg';
+import ImageProductSetDieuHoaRanRi from '../assets/images/products/set_dieu_hoa_ran_ri.jpg';
 import ImageProductSetDieuHoaXam from '../assets/images/products/set_dieu_hoa_xam.jpg';
 import ImageProductSetDieuHoaGhi from '../assets/images/products/set_dieu_may_ghi.jpg';
-import ImageProductAoRoiXam from '../assets/images/products/ao_roi_xam.jpg';
-import ImageProductAoRoiDen from '../assets/images/products/ao_roi_den.jpg';
-import ImageProductAoRoiRanRi from '../assets/images/products/ao_roi_ran_ri.jpg';
-import ImageProductAoRoGhi from '../assets/images/products/ao_roi_ghi.jpg';
-import IConStart from '../assets/images/icon_start.svg';
-import HotIcon from '../assets/images/hotico.svg';
-import { IProduct } from '@/interfaces';
 import { formatNumber } from '../utils';
-import { Link, useNavigate } from 'react-router-dom';
 
 const products: IProduct[] = [
   {
@@ -62,22 +62,20 @@ const products: IProduct[] = [
   {
     name: 'Áo rời màu đen ( Không gồm phụ kiện ) ',
     img: ImageProductAoRoiDen,
-    price: 3500000,
+    price: 350000,
   },
   {
     name: 'Áo rời màu rằn ri ( Không gồm phụ kiện )',
     img: ImageProductAoRoiRanRi,
-    price: 3500000,
+    price: 350000,
   },
   {
     name: 'Áo rời màu ghi ( Không gồm phụ kiện )',
     img: ImageProductAoRoGhi,
-    price: 3500000,
+    price: 350000,
   },
 ];
 export const HomePageComponent = () => {
-  const navigate = useNavigate();
-
   return (
     <StyledComponent srcHot={HotIcon}>
       <div className='title'>Gợi Ý Cho Nhà Bạn</div>
