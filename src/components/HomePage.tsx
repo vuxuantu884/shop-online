@@ -249,7 +249,7 @@ const StyledComponent = styled.div<{ srcHot: string }>`
       width: 126px;
       cursor: pointer;
       @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
-        padding: 8px;
+        padding: 6px;
       }
     }
     .payment:hover {
