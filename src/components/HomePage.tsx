@@ -57,7 +57,7 @@ const products: IProduct[] = [
   {
     name: 'Áo rời màu xám ( Không gồm phụ kiện )',
     img: ImageProductAoRoiXam,
-    price: 3500000,
+    price: 350000,
   },
   {
     name: 'Áo rời màu đen ( Không gồm phụ kiện ) ',
