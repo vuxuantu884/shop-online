@@ -13,12 +13,12 @@ export const HeaderComponent = () => {
   return (
     <StyledComponent className='background-header py-1'>
       <Row className={`container-header`} align='middle' justify='space-between'>
-        <Col span={10}>
+        <Col span={10} lg={18}>
           <Row gutter={[24, 0]}>
             <Col>
               <img src={Logo} className='logo' />
             </Col>
-            <Col style={{ flex: 1 }}>
+            <Col style={{ flex: 1 }} className='mb-none'>
               <Search
                 placeholder='Tìm kiếm sản phẩm'
                 allowClear
@@ -28,7 +28,7 @@ export const HeaderComponent = () => {
             </Col>
           </Row>
         </Col>
-        <Col span={14}>
+        <Col span={14} className='mb-none' lg={0}>
           <Row justify='end' gutter={[12, 0]} align='middle'>
             <Col>
               <Row align='middle' style={{ cursor: 'pointer' }}>
@@ -99,6 +99,15 @@ const StyledComponent = styled.div`
       padding: unset !important;
       width: 100% !important;
     }
+    @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+      justify-content: center !important;
+    }
+  }
+  .menu-header,
+  .mb-none {
+    @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+      display: none;
+    }
   }
   .menu-header div {
     font-weight: 600;
@@ -106,6 +115,7 @@ const StyledComponent = styled.div`
     text-transform: uppercase;
     color: #11006f;
   }
+
   .logo {
     /* width: 80px;
     height: 38px; */

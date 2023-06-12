@@ -82,7 +82,7 @@ export const HomePageComponent = () => {
       <Row gutter={[24, 24]}>
         {products.map(product => {
           return (
-            <Col span={4.8}>
+            <Col sm={12} xs={12} xl={4.8}>
               <div className='img'>
                 <img src={product.img} />
                 <div className='wrap-product-sold-info'>
@@ -122,6 +122,9 @@ const StyledComponent = styled.div<{ srcHot: string }>`
     max-width: ${p => p.theme.breakpoints['2xl'] + 'px'};
     padding: unset !important;
     width: 100% !important;
+  }
+  @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+    width: 95% !important;
   }
   .title {
     color: #11006f;
@@ -245,6 +248,9 @@ const StyledComponent = styled.div<{ srcHot: string }>`
       line-height: 16px;
       width: 126px;
       cursor: pointer;
+      @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+        padding: 8px;
+      }
     }
     .payment:hover {
       color: #fcaf17;

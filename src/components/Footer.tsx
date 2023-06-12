@@ -13,7 +13,7 @@ export const FooterComponent = () => {
     <StyledComponent>
       <div className='container-footer'>
         <Row gutter={[60, 0]}>
-          <Col span={6}>
+          <Col sm={24} xl={6}>
             <p className='sum'>
               🔥🔥🔥 SUZUSHII - TỰ HÀO LÀ ĐƠN VỊ CUNG ỨNG CHÍNH HÃNG VỚI DÒNG SẢN PHẨM ÁO ĐIỀU HOÀ
               CHUẨN THEO CÔNG NGHỆ NHẬT BẢN ❄️❄️❄️❄️❄️
@@ -23,7 +23,7 @@ export const FooterComponent = () => {
               <Input placeholder='Nhập email bạn đã đăng ký' />
               <Button type='primary'>Đăng ký</Button>
             </Space.Compact>
-            <Row gutter={[20, 0]}>
+            <Row gutter={[20, 0]} className='mb-none'>
               <Col>
                 <Link to='https://www.facebook.com/aodieuhoasuzushii' target='_blank'>
                   <FacebookOutlined style={{ fontSize: '32px' }} />
@@ -40,7 +40,7 @@ export const FooterComponent = () => {
               </Col>
             </Row>
           </Col>
-          <Col span={6}>
+          <Col span={6} className='mb-none'>
             <p>ÁO ĐIỀU HOÀ SUZUSHII CHÍNH HÃNG </p>
             <p>Giới thiệu</p>
             <p>Liên hệ</p>
@@ -49,7 +49,7 @@ export const FooterComponent = () => {
             <p>Hệ thống của hàng</p>
             <p>Ưu đãi Outlet</p>
           </Col>
-          <Col span={6}>
+          <Col span={6} className='mb-none'>
             <p>HỖ TRỢ KHÁCH HÀNG </p>
             <p>Hướng dẫn chọn size</p>
             <p>Chính sách khách hàng thân thiết</p>
@@ -58,7 +58,7 @@ export const FooterComponent = () => {
             <p>Thanh toán, giao nhận</p>
             <p>Chính sách Đồng phục</p>
           </Col>
-          <Col span={6}>
+          <Col span={6} className='mb-none'>
             <p>ÁO ĐIỀU HÒA SUZUSHII JAPAN EXPORT </p>
             <p>Mã số thuế: 0801361801</p>
             <p>Địa chỉ: xã Hiệp Lực – huyện Ninh Giang – tỉnh Hải Dương</p>
@@ -90,6 +90,9 @@ const StyledComponent = styled.div`
       padding: unset !important;
       width: 100% !important;
     }
+    @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+      width: 95%;
+    }
   }
   p {
     font-size: 14px !important;
@@ -104,5 +107,10 @@ const StyledComponent = styled.div`
   .copyright {
     text-align: center;
     padding-bottom: 24px;
+  }
+  .mb-none {
+    @media screen and (max-width: ${p => p.theme.breakpoints.lg + 'px'}) {
+      display: none;
+    }
   }
 `;
